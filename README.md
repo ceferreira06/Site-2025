@@ -20,7 +20,7 @@ Um site moderno e responsivo para uma loja de roupas streetwear, desenvolvido co
 
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/drip-mode.git
+git clone https://github.com/ceferreira06/Site-2025.git
 ```
 
 2. Navegue até a pasta do projeto:
