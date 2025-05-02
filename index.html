@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Guarda-Roupa Virtual</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#meu-guarda-roupa">Meu Guarda-Roupa</a></li>
+                <li><a href="#meus-conjuntos">Meus Conjuntos</a></li>
+                <li><a href="#adicionar-roupa">Adicionar Roupa</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="meu-guarda-roupa" class="guarda-roupa-section">
+            <h2>Meu Guarda-Roupa</h2>
+            
+            <!-- Carrossel de Camisetas -->
+            <div class="categoria-roupa">
+                <h3>Camisetas</h3>
+                <div class="carrossel-container">
+                    <div class="carrossel" data-categoria="camisetas">
+                        <div class="item-roupa">
+                            <img src="camiseta.png" alt="Camiseta">
+                            <button class="btn-selecionar">Selecionar</button>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Carrossel de Calças -->
+            <div class="categoria-roupa">
+                <h3>Calças</h3>
+                <div class="carrossel-container">
+                    <div class="carrossel" data-categoria="calcas">
+                        <div class="item-roupa">
+                            <img src="calca.png" alt="Calça">
+                            <button class="btn-selecionar">Selecionar</button>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Carrossel de Tênis -->
+            <div class="categoria-roupa">
+                <h3>Tênis</h3>
+                <div class="carrossel-container">
+                    <div class="carrossel" data-categoria="tenis">
+                        <div class="item-roupa">
+                            <img src="tenis.png" alt="Tênis">
+                            <button class="btn-selecionar">Selecionar</button>
+                        </div>
+                    </div>
+                    <button class="carrossel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <button class="carrossel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="conjunto-atual" class="conjunto-section">
+            <h2>Conjunto Atual</h2>
+            <div class="conjunto-visualizacao">
+                <div class="conjunto-item" id="conjunto-camisa">
+                    <img src="placeholder.png" alt="Camisa Selecionada">
+                </div>
+                <div class="conjunto-item" id="conjunto-calca">
+                    <img src="placeholder.png" alt="Calça Selecionada">
+                </div>
+                <div class="conjunto-item" id="conjunto-tenis">
+                    <img src="placeholder.png" alt="Tênis Selecionado">
+                </div>
+            </div>
+            <button class="btn-salvar-conjunto">Salvar Conjunto</button>
+        </section>
+
+        <section id="adicionar-roupa" class="adicionar-roupa-section">
+            <h2>Adicionar Nova Roupa</h2>
+            <form id="form-adicionar-roupa">
+                <div class="form-group">
+                    <label for="categoria">Categoria:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="camisetas">Camiseta</option>
+                        <option value="calcas">Calça</option>
+                        <option value="tenis">Tênis</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="imagem">Imagem:</label>
+                    <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                </div>
+                <button type="submit" class="btn-adicionar">Adicionar Roupa</button>
+            </form>
+        </section>
+
+        <section id="meus-conjuntos" class="conjuntos-salvos-section">
+            <h2>Meus Conjuntos Salvos</h2>
+            <div class="conjuntos-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Meu Guarda-Roupa Virtual</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
